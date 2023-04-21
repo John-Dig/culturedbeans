@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Cultured Beans
+
+_By John Diggins_
+
+# Description
+A website demonstrating building an app with create-react-app
+
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
