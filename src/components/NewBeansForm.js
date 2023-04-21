@@ -14,7 +14,7 @@ function NewBeansForm(props) {
     </React.Fragment>
   );
 
-  NewBeansForm.propTypes = {
+  NewBeansForm.propTypes = { //checks if the onNewBeansCreation prop is a function
     onNewBeansCreation: PropTypes.func
   };
 
