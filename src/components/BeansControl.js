@@ -17,6 +17,12 @@ class BeansControl extends React.Component {
     }));
   }
 
+  handleAddingNewBeansToList = (newBeans) => {
+    const newMainBeansList = this.state.mainBeansList.concat(newBeans);
+    this.setState({ mainBeansList: newMainBeansList, formVisibleOnPage: false });
+  }
+  
+
   render() {
     let currentlyVisibleContent = null;
     let buttonText = null;
