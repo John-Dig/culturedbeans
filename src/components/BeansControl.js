@@ -26,12 +26,18 @@ class BeansControl extends React.Component {
   render() {
     let currentlyVisibleContent = null;
     let buttonText = null;
+
     if (this.state.formVisibleOnPage) {
       currentlyVisibleContent = <NewBeansForm />;
 
     }
     else if (!this.state.formVisibleOnPage) {
       currentlyVisibleContent = <BeansList />;
+    }
+
+    else if (this.state.formVisibleOnPage) {
+      currentlyVisibleContent = <NewBeansForm onNewBeansCreation={this.handleAddingNewBeansToList} />;
+      buttonText = "Return to Beans List";
     }
 
     else {

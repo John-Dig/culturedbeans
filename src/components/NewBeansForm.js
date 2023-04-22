@@ -4,19 +4,26 @@ import { v4 } from 'uuid';
 import ReusableForm from './ReusableForm';
 
 function NewBeansForm(props) {
-  function handleNewBeansFormSubmission(event) {
-    event.preventDefault();
-    props.onNewBeansCreation({ name: event.target.name.value, origin: event.target.origin.value, roast: event.target.roast.value, price: event.target.price.value, notes: event.target.notes.value, id: v4() });
+  function handleNewBeansFormSubmission(e) {
+    e.preventDefault();
+    props.onNewBeansCreation({
+      name: e.target.name.value,
+      origin: e.target.origin.value,
+      roast: e.target.roast.value,
+      price: e.target.price.value,
+      notes: e.target.notes.value,
+      id: v4()
+    });
   }
   return (
     <React.Fragment>
       <ReusableForm formSubmissionHandler={handleNewBeansFormSubmission} buttonText="Add a bag of beans" />
     </React.Fragment>
   );
-
-  NewBeansForm.propTypes = { //checks if the onNewBeansCreation prop is a function
-    onNewBeansCreation: PropTypes.func
-  };
-
 }
+
+NewBeansForm.propTypes = { //checks if the onNewBeansCreation prop is a function
+  onNewBeansCreation: PropTypes.func
+};
+
 export default NewBeansForm;
