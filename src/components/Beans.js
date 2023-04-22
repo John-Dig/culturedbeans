@@ -5,12 +5,12 @@ function Beans(props) {
   return (
     <React.Fragment>
       <div onClick={() => props.whenBeansClicked(props.id)}>
-        <h2>name={Beans.name}</h2>
-        origin={Beans.origin}
-        roast={Beans.roast}
-        price={Beans.price}
-        notes={Beans.notes}
-        id={Beans.id}
+        <h2>{props.name}</h2>
+       <h3> {props.origin}</h3>
+       <h3> {props.roast}</h3>
+       <h3> {props.price}</h3>
+       <h3> Notes: {props.notes}</h3>
+       <hr />
       </div>
     </React.Fragment>
   );

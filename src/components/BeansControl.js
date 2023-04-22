@@ -75,7 +75,7 @@ class BeansControl extends React.Component {
       buttonText = "Return to beans list";
    } else {
     currentlyVisibleContent = <BeansList beansList= {this.state.mainBeansList} onNewBeansSelection = {this.handleChangingSelectedBeans} />;
-    buttonText = "Add beans";
+    buttonText = "Add de beans";
    }
 
     // else if (!this.state.formVisibleOnPage) {
