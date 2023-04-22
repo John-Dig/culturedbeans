@@ -1,29 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
 import ReusableForm from './ReusableForm';
 
-function NewBeansForm(props) {
-  function handleNewBeansFormSubmission(e) {
+function EditBeansForm(props) {
+  const { beans } = props;
+  function handleEditBeansFormSubmission(e) {
     e.preventDefault();
-    props.onNewBeansCreation({
+    props.onEditBeans({
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
       price: e.target.price.value,
       notes: e.target.notes.value,
-      id: v4()
+      id: beans.id
     });
   }
   return (
     <React.Fragment>
-      <ReusableForm formSubmissionHandler={handleNewBeansFormSubmission} buttonText="Add these beans" />
+      <ReusableForm formSubmissionHandler={handleEditBeansFormSubmission} buttonText="Update Beans" />
     </React.Fragment>
   );
 }
 
-NewBeansForm.propTypes = { 
-  onNewBeansCreation: PropTypes.func
+EditBeansForm.propTypes = {
+  beans: PropTypes.object,
+  onEditBeans: PropTypes.func
 };
 
-export default NewBeansForm;
+export default EditBeansForm;
