@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
+import { v4 } from 'uuid';
 
 function EditBeansForm(props) {
   const { beans } = props;
+
   function handleEditBeansFormSubmission(e) {
     e.preventDefault();
     props.onEditBeans({
@@ -16,14 +18,14 @@ function EditBeansForm(props) {
     });
   }
   return (
-    <React.Fragment>
+    <>
       <ReusableForm formSubmissionHandler={handleEditBeansFormSubmission} buttonText="Update Beans" />
-    </React.Fragment>
+    </>
   );
 }
 
 EditBeansForm.propTypes = {
-  beans: PropTypes.object,
+  Beans: PropTypes.object,
   onEditBeans: PropTypes.func
 };
 

@@ -3,7 +3,6 @@ import NewBeansForm from './NewBeansForm';
 import BeansList from './BeansList';
 import BeansDetails from './BeansDetails';
 import EditBeansForm from './EditBeansForm';
-import { Simulate } from 'react-dom/test-utils';
 
 class BeansControl extends React.Component {
 
@@ -13,7 +12,7 @@ class BeansControl extends React.Component {
       formVisibleOnPage: false,
       mainBeansList: [],
       selectedBeans: null,
-      //     editing: false
+      editing: false
     };
   }
 
@@ -22,7 +21,7 @@ class BeansControl extends React.Component {
       this.setState({
         formVisibleOnPage: false,
         selectedBeans: null,
-        // editing: false
+        editing: false
       })
 
     } else {
@@ -73,24 +72,10 @@ class BeansControl extends React.Component {
     else if (this.state.formVisibleOnPage) {
       currentlyVisibleContent = <NewBeansForm onNewBeansCreation={this.handleAddingNewBeansToList} />; //NewBeansForm is a React component
       buttonText = "Return to beans list";
-   } else {
-    currentlyVisibleContent = <BeansList beansList= {this.state.mainBeansList} onNewBeansSelection = {this.handleChangingSelectedBeans} />;
-    buttonText = "Add de beans";
-   }
-
-    // else if (!this.state.formVisibleOnPage) {
-    //   currentlyVisibleContent = <BeansList />;
-    //   buttonText = "Add some beans"
-    // }
-
-    // else if (this.state.formVisibleOnPage) {
-    //   currentlyVisibleContent = <NewBeansForm onNewBeansCreation={this.handleAddingNewBeansToList} />;
-    //   buttonText = "Return to Beans List";
-    // }
-
-    // else {
-    //   buttonText = "else reached";
-    // }
+    } else {
+      currentlyVisibleContent = <BeansList beansList={this.state.mainBeansList} onBeansSelection={this.handleChangingSelectedBeans} />; //was "onNewBeansSelection"
+      buttonText = "Add de beans";
+    }
 
     return (
       <React.Fragment>
