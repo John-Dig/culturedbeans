@@ -8,8 +8,9 @@ function BeansDetails(props) {
     <React.Fragment>
       <h1>Beans Details</h1>
       <h3>{beans.name} - {beans.origin}</h3>
-      <p><em>{beans.roast}</em></p>
-      <p>{beans.price}</p>
+      <p>Roast: {beans.roast}</p>
+      <p>Price per 1 pound bag: {beans.price}</p>
+      <p>Total inventory: {beans.lbs}-lbs</p>
       <p>{beans.notes}</p>
       <hr />
       <button onClick={ props.onClickingEdit }>Update Beans</button>

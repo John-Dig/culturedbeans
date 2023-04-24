@@ -14,6 +14,8 @@ function BeansList(props) {
           origin={beans.origin}
           roast={beans.roast}
           price={beans.price}
+          burlapBags={beans.burlapBags}
+          lbs={beans.lbs}
           notes={beans.notes}
           id={beans.id}
           key={beans.id} />

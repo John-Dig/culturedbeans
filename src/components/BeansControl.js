@@ -41,7 +41,6 @@ class BeansControl extends React.Component {
 
   handleDeleteBeans = (id) => {
     const newMainBeansList = this.state.mainBeansList.filter(beans => beans.id !== id);
-    this.setState({ mainBeansList: newMainBeansList, selectedBeans: null });
   }
 
   handleEditingBeansInList = (beansToEdit) => {

@@ -13,6 +13,8 @@ function EditBeansForm(props) {
       origin: e.target.origin.value,
       roast: e.target.roast.value,
       price: e.target.price.value,
+      burlapBags: e.target.burlapBags.value,
+      lbs: e.target.lbs.value,
       notes: e.target.notes.value,
       id: beans.id
     });

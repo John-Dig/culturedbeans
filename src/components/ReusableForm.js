@@ -8,23 +8,27 @@ function ReusableForm(props) {
         <input
           type='text'
           name='name'
-          placeholder='Name' />
+          placeholder='Name' /><br></br>
           <input
             type='text'
             name='origin'
-            placeholder='Origin' />
+            placeholder='Origin' /><br></br>
         <input
           type='text'
           name='roast'
-          placeholder='Roast' />
+          placeholder='Roast' /><br></br>
         <input
           type='text'
           name='price'
-          placeholder='Price' />
+          placeholder='Price for 1lb bags' /><br></br>
+        <input
+          type='text'
+          name='burlapBags'
+          placeholder='# of Burlap Bags' /><br></br>
         <input
           type='text'
           name='notes'
-          placeholder='Notes' />
+          placeholder='Notes' /><br></br>
               <button type='submit'>{props.buttonText}</button>
       </form>
     </>
