@@ -1,19 +1,28 @@
-/* 
+/* Updated color palette */
+:root {
+  --primary-color: #6B4E3F; /* Coffee Brown */
+  --secondary-color: #D9B38C; /* Light Coffee */
+  --accent-color: #F1E6D4; /* Cream */
+  --text-color: #333333; /* Dark Text Color */
+  --header-color: rgb(228, 164, 85) ; /* White */
+  --beans-color: #a9ba97;
+}
+
 html {
   font-family: nunito;
   font-size: 16px;
   background-image: './img/background.jpeg';
 }
+
 body {
   background-image: './img/background.jpeg';
   margin: 0;
   padding: 0;
-  background-color: lavender;
+  background-color: var(--accent-color);
   font-family: nunito;
   font-size: 16px;
   padding: 2rem;
-
-} */
+}
 
 input {
   font-family: nunito;
@@ -31,28 +40,29 @@ button {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  transition:background-color 0.9s ease;
+  transition: background-color 0.9s ease;
+  background-color: var(--secondary-color);
+  margin: 1rem;
 }
 
 button:hover {
-  background-color: burlywood;
-
+  background-color: var(--primary-color);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1f1f1;
+  background-color: var(--header-color);
   padding: 20px;
   font-family: playfair display;
   border-radius: 5px;
   border-style: solid;
-  border-color: #f1f1f1;
+  border-color: var(--white);
 }
 
 .header_left {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   flex: 1;
@@ -65,20 +75,29 @@ button:hover {
 .header_img {
   width: 150px;
   height: auto;
-  margin-right:20px;
+  margin-right: 20px;
 }
 
-.header_center
-{
+.header_center {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 1;
- }
+}
 
-/* p {
-  font-family: cursive;
-  font-size: 1.2rem;
-  line-height: 1.5;
-} */
+.beans {
+  width: 400px;
+  height: auto;
+  margin-right: 20px;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: var(--beans-color);
 
+}
+
+.beans:hover {
+  color: var(--primary-color);
+  cursor: zoom-in;
+}

@@ -1,15 +1,23 @@
+:root {
+  --primary-color: #6B4E3F; /* Coffee Brown */
+  --secondary-color: #D9B38C; /* Light Coffee */
+  --accent-color: #F1E6D4; /* Cream */
+  --text-color: #333333; /* Dark Text Color */
+  --white: #FFFFFF; /* White */
+}
+
 html {
   font-family: nunito;
   font-size: 16px;
   background-image: './img/background.jpeg';
 }
+
 body {
   background-image: './img/background.jpeg';
   margin: 0;
   padding: 0;
-  background-color: lavender;
+  background-color: var(--accent-color);
   font-family: nunito;
   font-size: 16px;
   padding: 2rem;
-
 }
