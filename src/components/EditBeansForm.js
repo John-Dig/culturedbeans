@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReusableForm from './ReusableForm';
-import { v4 } from 'uuid';
 
 function EditBeansForm(props) {
   const { beans } = props;
 
   function handleEditBeansFormSubmission(e) {
     e.preventDefault();
+    const numberOfBurlapBags = 0;
     props.onEditBeans({
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
       price: e.target.price.value,
-      burlapBags: e.target.burlapBags.value,
+      burlapBags: numberOfBurlapBags,
       lbs: e.target.lbs.value,
       notes: e.target.notes.value,
       id: beans.id
@@ -21,7 +20,15 @@ function EditBeansForm(props) {
   }
   return (
     <>
-      <ReusableForm formSubmissionHandler={handleEditBeansFormSubmission} buttonText="Update Beans" />
+   <form onSubmit={handleEditBeansFormSubmission}>
+        <input type='text' name='name' placeholder='Name' /><br></br>
+        <input type='text' name='origin' placeholder='Origin' /><br></br>
+        <input type='text' name='roast' placeholder='Roast' /><br></br>
+        <input type='text' name='price' placeholder='Price for 1lb bags' /><br></br>
+        <input type='text' name='lbs' placeholder='total lbs of loose beans' /><br></br>
+        <input type='text' name='notes' placeholder='Notes' /><br></br>
+        <button type='submit'>Update these beans</button>
+      </form>
     </>
   );
 }

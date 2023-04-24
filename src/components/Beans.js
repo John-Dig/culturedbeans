@@ -4,15 +4,14 @@ import PropTypes from 'prop-types';
 function Beans(props) {
   return (
     <>
-      <div onClick={() => props.whenBeansClicked(props.id)}>
-        <h2>{props.name}:<em> {props.lbs}lbs</em></h2>
+      <div className='beans' onClick={() => props.whenBeansClicked(props.id)}>
+        <h2>{props.name}</h2>
         <h3> {props.origin}</h3>
         <h3> {props.roast}</h3>
         <h3> Price: {props.price}</h3>
-        <h3> Burlap Bags: {props.burlapBags}</h3>
-        <h3> lbs: {props.lbs}</h3>
-        <h3> Notes: {props.notes}</h3>
+        <h3> lbs total beans: {props.lbs}</h3>
         <hr />
+        <h3> Notes: {props.notes}</h3>
       </div>
     </>
   );

@@ -6,6 +6,7 @@
   --text-color: #333333; /* Dark Text Color */
   --header-color: rgb(228, 164, 85) ; /* White */
   --beans-color: #a9ba97;
+  --white: #FFFFFF; /* White */
 }
 
 html {
@@ -47,6 +48,11 @@ button {
 
 button:hover {
   background-color: var(--primary-color);
+}
+
+.container {
+  position: relative;
+
 }
 
 .header {
@@ -100,4 +106,14 @@ button:hover {
 .beans:hover {
   color: var(--primary-color);
   cursor: zoom-in;
+}
+
+.gif {
+  position: absolute;
+  top: 100%; /* Below the header */
+  right: 30%; /* All the way to the right */
+  align-items: right;
+  width: 800px;
+  z-index: 0;
+  width:300px;
 }
