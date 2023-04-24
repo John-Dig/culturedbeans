@@ -15,7 +15,29 @@ body {
 
 } */
 
+input {
+  font-family: nunito;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
 
+button {
+  font-family: nunito;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  transition:background-color 0.9s ease;
+}
+
+button:hover {
+  background-color: burlywood;
+
+}
 
 .header {
   display: flex;
