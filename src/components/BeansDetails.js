@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function BeansDetails(props) {
-  const { beans, onClickingDelete , onClickingSale} = props;
-
+  
+  const { beans, onClickingEdit, onClickingDelete, onClickingSale} = props;
   return (
     <React.Fragment>
       <h1>Beans Details</h1>
@@ -13,9 +13,10 @@ function BeansDetails(props) {
       <p>Total inventory: {beans.lbs}-lbs</p>
       <p>{beans.notes}</p>
       <hr />
-      <button onClick={ props.onClickingEdit }>Update Beans</button>
+    {/* ??? need to get props in here correctly*/}
+      <button onClick={ onClickingEdit }>Update Beans</button>
       <button onClick={() => onClickingDelete(beans.id) }>Delete this bean entry</button>
-      <button onClick={() => onClickingSale(beans.id) }>Sell 1 lb bag of beans</button>
+      {beans.lbs ? (<button onClick={() => onClickingSale(beans.id) }>Sell 1 lb bag of beans</button>) : (<h1>you're out of {beans.name}!</h1>)}
     </React.Fragment>
   );
 }

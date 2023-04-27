@@ -8,7 +8,7 @@ function Beans(props) {
         <h2>{props.name}</h2>
         <h3> {props.origin}</h3>
         <h3> {props.roast}</h3>
-        <h3> Price: {props.price}</h3>
+        <h3> Price: ${props.price}</h3>
         <h3> lbs total beans: {props.lbs}</h3>
         <hr />
         <h3> Notes: {props.notes}</h3>

@@ -54,7 +54,6 @@ class BeansControl extends React.Component {
     this.setState({ editing: true });
   }
   handleSaleClick = () => {
-    console.log("sale clicked")
     const selectedBeans = this.state.selectedBeans;
     this.setState({ mainBeansList: this.state.mainBeansList.filter(beans => beans.id !== selectedBeans.id).concat({ ...selectedBeans, lbs: selectedBeans.lbs - 1 }), selectedBeans: null });
   }
@@ -63,7 +62,7 @@ class BeansControl extends React.Component {
     let buttonText = null;
 
     if (this.state.editing) {
-      currentlyVisibleContent = <EditBeansForm beans={this.state.selectedBeans}  //add ?
+      currentlyVisibleContent = <EditBeansForm beans={this.state.selectedBeans}  
         onEditBeans={this.handleEditingBeansInList} />
       buttonText = "Return to beans list";
     }

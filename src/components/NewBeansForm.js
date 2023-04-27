@@ -5,9 +5,12 @@ import { v4 } from 'uuid';
 function NewBeansForm(props) {
   function handleNewBeansFormSubmission(e) {
     e.preventDefault();
-    const numberOfBurlapBags = parseInt(e.target.burlapBags.value);
-
-    props.onNewBeansCreation({
+    // let numberOfBurlapBags;
+    // if (e.target.burlapBags.value < 0) {numberOfBurlapBags = 0}
+    // else {numberOfBurlapBags = e.target.burlapBags.value};
+    const numberOfBurlapBags = e.target.burlapBags.value;
+     
+      props.onNewBeansCreation({
       name: e.target.name.value,
       origin: e.target.origin.value,
       roast: e.target.roast.value,
@@ -24,8 +27,8 @@ function NewBeansForm(props) {
         <input type='text' name='name' placeholder='Name' /><br></br>
         <input type='text' name='origin' placeholder='Origin' /><br></br>
         <input type='text' name='roast' placeholder='Roast' /><br></br>
-        <input type='text' name='price' placeholder='Price for 1lb bags' /><br></br>
-        <input type='text' name='burlapBags' placeholder='# of Burlap Bags' /><br></br>
+        <input type='number' name='price' placeholder='Price for 1lb bags' min='0' step='.01'/><br></br>
+        <input type='number' name='burlapBags' placeholder='# of Burlap Bags' min='0'/><br></br>
         <input type='text' name='notes' placeholder='Notes' /><br></br>
         <button type='submit'>Add these beans</button>
       </form>
