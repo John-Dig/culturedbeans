@@ -51,10 +51,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 ## Diagram
-[Alt text](culturedBeans.png)
+[Click to view](culturedBeans.png)
 
 ## Known Bugs
-If the diagram isn't rendering above under 'Diagram', it can be found in the root repo directory.
+None.
 
 #### License
 ##### [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
